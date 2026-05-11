@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_67efaef3c6bfc0802ec1c1d1c2bddd36 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+<h3 align="center" style="font-size:22px; margin-top:12px;">
+<b>Top Cyclistic Start Stations by Rider Type</b>
+</h3>
+    
+<div style="
+position: fixed;
+bottom: 40px;
+left: 40px;
+width: 240px;
+background-color: white;
+border: 2px solid #555;
+z-index: 9999;
+font-size: 16px;
+padding: 14px;
+box-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+line-height: 1.8;
+border-radius: 6px;
+">
+
+<b style="font-size:20px;">Map Legend</b><br>
+
+<span style="color:blue; font-size:22px;">●</span>
+Annual Member<br>
+
+<span style="color:orange; font-size:22px;">●</span>
+Casual Rider<br>
+
+<span style="font-size:20px;">🚉</span>
+Union Station
+
+</div>
+    
+            <div class="folium-map" id="map_67efaef3c6bfc0802ec1c1d1c2bddd36" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_67efaef3c6bfc0802ec1c1d1c2bddd36 = L.map(
+                "map_67efaef3c6bfc0802ec1c1d1c2bddd36",
+                {
+                    center: [41.89, -87.63],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 13.4,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1ce1e7ce7ac6ac38fbac8a8fc4826165 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1ce1e7ce7ac6ac38fbac8a8fc4826165.addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+            var circle_marker_44d257dd8c49e8593dec7735b24a8b98 = L.circleMarker(
+                [41.879255, -87.639904],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_3cd1ddff8e19bdd7b0384554a83f9bf2 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_f0ecd6a8c1b25ea89ee352c1166ec7f8 = $(`<div id="html_f0ecd6a8c1b25ea89ee352c1166ec7f8" style="width: 100.0%; height: 100.0%;">             <b>Canal St & Adams St</b><br>             Rider Type: Annual Member<br>             Total Rides: 50,575             </div>`)[0];
+                popup_3cd1ddff8e19bdd7b0384554a83f9bf2.setContent(html_f0ecd6a8c1b25ea89ee352c1166ec7f8);
+            
+        
+
+        circle_marker_44d257dd8c49e8593dec7735b24a8b98.bindPopup(popup_3cd1ddff8e19bdd7b0384554a83f9bf2)
+        ;
+
+        
+    
+    
+            var circle_marker_14321c1b49915638ed009d25ceca52dc = L.circleMarker(
+                [41.882242, -87.641066],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_8a63a36fd26b03e8355c040a79aaf6ad = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_44e9a89f962c0bc785c592aa7a4ef6b6 = $(`<div id="html_44e9a89f962c0bc785c592aa7a4ef6b6" style="width: 100.0%; height: 100.0%;">             <b>Clinton St & Madison St</b><br>             Rider Type: Annual Member<br>             Total Rides: 45,990             </div>`)[0];
+                popup_8a63a36fd26b03e8355c040a79aaf6ad.setContent(html_44e9a89f962c0bc785c592aa7a4ef6b6);
+            
+        
+
+        circle_marker_14321c1b49915638ed009d25ceca52dc.bindPopup(popup_8a63a36fd26b03e8355c040a79aaf6ad)
+        ;
+
+        
+    
+    
+            var circle_marker_630fca45007a6483d7e4df7537a96529 = L.circleMarker(
+                [41.88338, -87.64117],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_a838b0f7f5f60920a815bb1863dda3a6 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_863d17c84544696d280f6d7676218225 = $(`<div id="html_863d17c84544696d280f6d7676218225" style="width: 100.0%; height: 100.0%;">             <b>Clinton St & Washington Blvd</b><br>             Rider Type: Annual Member<br>             Total Rides: 45,378             </div>`)[0];
+                popup_a838b0f7f5f60920a815bb1863dda3a6.setContent(html_863d17c84544696d280f6d7676218225);
+            
+        
+
+        circle_marker_630fca45007a6483d7e4df7537a96529.bindPopup(popup_a838b0f7f5f60920a815bb1863dda3a6)
+        ;
+
+        
+    
+    
+            var circle_marker_cffb7e8ac243f50229f512c19ac02385 = L.circleMarker(
+                [41.884728, -87.619521],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_49c0741002fe64a331f27c4cffc135bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_8c731ab378697ff79efffca4777c7099 = $(`<div id="html_8c731ab378697ff79efffca4777c7099" style="width: 100.0%; height: 100.0%;">             <b>Columbus Dr & Randolph St</b><br>             Rider Type: Annual Member<br>             Total Rides: 31,370             </div>`)[0];
+                popup_49c0741002fe64a331f27c4cffc135bb.setContent(html_8c731ab378697ff79efffca4777c7099);
+            
+        
+
+        circle_marker_cffb7e8ac243f50229f512c19ac02385.bindPopup(popup_49c0741002fe64a331f27c4cffc135bb)
+        ;
+
+        
+    
+    
+            var circle_marker_8e3fb407ab1107d89f73195f11bdc4f5 = L.circleMarker(
+                [41.880317, -87.635185],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_2692614af86b3e6e85514fb91cafb6c7 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_c5a33d9678391c80e921400e690dde3c = $(`<div id="html_c5a33d9678391c80e921400e690dde3c" style="width: 100.0%; height: 100.0%;">             <b>Franklin St & Monroe St</b><br>             Rider Type: Annual Member<br>             Total Rides: 30,832             </div>`)[0];
+                popup_2692614af86b3e6e85514fb91cafb6c7.setContent(html_c5a33d9678391c80e921400e690dde3c);
+            
+        
+
+        circle_marker_8e3fb407ab1107d89f73195f11bdc4f5.bindPopup(popup_2692614af86b3e6e85514fb91cafb6c7)
+        ;
+
+        
+    
+    
+            var circle_marker_5bfece95c087e3cd05bdeb4acd60eae8 = L.circleMarker(
+                [41.889176, -87.638505],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_00ceb110d7f3548669c230ce353047a3 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_74e923d1343e4f5094d0ffdf390761fb = $(`<div id="html_74e923d1343e4f5094d0ffdf390761fb" style="width: 100.0%; height: 100.0%;">             <b>Kingsbury St & Kinzie St</b><br>             Rider Type: Annual Member<br>             Total Rides: 30,654             </div>`)[0];
+                popup_00ceb110d7f3548669c230ce353047a3.setContent(html_74e923d1343e4f5094d0ffdf390761fb);
+            
+        
+
+        circle_marker_5bfece95c087e3cd05bdeb4acd60eae8.bindPopup(popup_00ceb110d7f3548669c230ce353047a3)
+        ;
+
+        
+    
+    
+            var circle_marker_6234c5c30a0ac904f7643a9d11883a36 = L.circleMarker(
+                [41.884241, -87.629634],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_7119b624216b15691d2cc5cc45eb557a = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_64033ebdc4a0c5d96723242cce2657db = $(`<div id="html_64033ebdc4a0c5d96723242cce2657db" style="width: 100.0%; height: 100.0%;">             <b>Daley Center Plaza</b><br>             Rider Type: Annual Member<br>             Total Rides: 30,423             </div>`)[0];
+                popup_7119b624216b15691d2cc5cc45eb557a.setContent(html_64033ebdc4a0c5d96723242cce2657db);
+            
+        
+
+        circle_marker_6234c5c30a0ac904f7643a9d11883a36.bindPopup(popup_7119b624216b15691d2cc5cc45eb557a)
+        ;
+
+        
+    
+    
+            var circle_marker_adfa33c851a4cd4690f8c143ef90c4c1 = L.circleMarker(
+                [41.882091, -87.639833],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_0aeb1031cfb95142d01175a95c3c27f4 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1bd5471ec44f5292b63a7c6a09eb5d47 = $(`<div id="html_1bd5471ec44f5292b63a7c6a09eb5d47" style="width: 100.0%; height: 100.0%;">             <b>Canal St & Madison St</b><br>             Rider Type: Annual Member<br>             Total Rides: 27,138             </div>`)[0];
+                popup_0aeb1031cfb95142d01175a95c3c27f4.setContent(html_1bd5471ec44f5292b63a7c6a09eb5d47);
+            
+        
+
+        circle_marker_adfa33c851a4cd4690f8c143ef90c4c1.bindPopup(popup_0aeb1031cfb95142d01175a95c3c27f4)
+        ;
+
+        
+    
+    
+            var circle_marker_da60095f2546416155f99b8d267592e2 = L.circleMarker(
+                [41.883984, -87.624684],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_80d0ab7847c342a7d917c259e0acfa91 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_d1ffb0672f8e5383893541e462a4b77b = $(`<div id="html_d1ffb0672f8e5383893541e462a4b77b" style="width: 100.0%; height: 100.0%;">             <b>Michigan Ave & Washington St</b><br>             Rider Type: Annual Member<br>             Total Rides: 25,468             </div>`)[0];
+                popup_80d0ab7847c342a7d917c259e0acfa91.setContent(html_d1ffb0672f8e5383893541e462a4b77b);
+            
+        
+
+        circle_marker_da60095f2546416155f99b8d267592e2.bindPopup(popup_80d0ab7847c342a7d917c259e0acfa91)
+        ;
+
+        
+    
+    
+            var circle_marker_4f4901a0bd5949f23ce238780318b9ef = L.circleMarker(
+                [41.883984, -87.624684],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_5799368cfdb3ca57b14484c2c3aa959e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_548706749f3c4e38874eaa2af07dfefa = $(`<div id="html_548706749f3c4e38874eaa2af07dfefa" style="width: 100.0%; height: 100.0%;">             <b>Michigan Ave & Washington St</b><br>             Rider Type: Annual Member<br>             Total Rides: 25,468             </div>`)[0];
+                popup_5799368cfdb3ca57b14484c2c3aa959e.setContent(html_548706749f3c4e38874eaa2af07dfefa);
+            
+        
+
+        circle_marker_4f4901a0bd5949f23ce238780318b9ef.bindPopup(popup_5799368cfdb3ca57b14484c2c3aa959e)
+        ;
+
+        
+    
+    
+            var circle_marker_1fff51c14f84914e2e7ca9cd3512ed92 = L.circleMarker(
+                [41.878287, -87.632756],
+                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_3785b8fc4679fcbf20cc11714e86a930 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e7b65478a1f63636400b5032bd362bab = $(`<div id="html_e7b65478a1f63636400b5032bd362bab" style="width: 100.0%; height: 100.0%;">             <b>LaSalle St & Jackson Blvd</b><br>             Rider Type: Annual Member<br>             Total Rides: 23,021             </div>`)[0];
+                popup_3785b8fc4679fcbf20cc11714e86a930.setContent(html_e7b65478a1f63636400b5032bd362bab);
+            
+        
+
+        circle_marker_1fff51c14f84914e2e7ca9cd3512ed92.bindPopup(popup_3785b8fc4679fcbf20cc11714e86a930)
+        ;
+
+        
+    
+    
+            var circle_marker_7ad212f6786198f971254e780527e818 = L.circleMarker(
+                [41.892278, -87.612043],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_6ea9b3867bb3728597e97f2cecde9663 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_e9b9cb939b468e82255dde8d75ec3ff4 = $(`<div id="html_e9b9cb939b468e82255dde8d75ec3ff4" style="width: 100.0%; height: 100.0%;">             <b>Streeter Dr & Grand Ave</b><br>             Rider Type: Casual Rider<br>             Total Rides: 53,104             </div>`)[0];
+                popup_6ea9b3867bb3728597e97f2cecde9663.setContent(html_e9b9cb939b468e82255dde8d75ec3ff4);
+            
+        
+
+        circle_marker_7ad212f6786198f971254e780527e818.bindPopup(popup_6ea9b3867bb3728597e97f2cecde9663)
+        ;
+
+        
+    
+    
+            var circle_marker_d88730e51b2c501ad5c7363328f24355 = L.circleMarker(
+                [41.880958, -87.616743],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_0bf85337b50004fe3eb45d366f82e833 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_80382b530d6a92488ab21624d4f63508 = $(`<div id="html_80382b530d6a92488ab21624d4f63508" style="width: 100.0%; height: 100.0%;">             <b>Lake Shore Dr & Monroe St</b><br>             Rider Type: Casual Rider<br>             Total Rides: 39,238             </div>`)[0];
+                popup_0bf85337b50004fe3eb45d366f82e833.setContent(html_80382b530d6a92488ab21624d4f63508);
+            
+        
+
+        circle_marker_d88730e51b2c501ad5c7363328f24355.bindPopup(popup_0bf85337b50004fe3eb45d366f82e833)
+        ;
+
+        
+    
+    
+            var circle_marker_0f3bb0e91674bc57b98e8fa6f2c8571c = L.circleMarker(
+                [41.881032, -87.624084],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_2ea9e0660bdfc21e05155ab15db18744 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_5ba7279420745a80d666fbbbc91862f3 = $(`<div id="html_5ba7279420745a80d666fbbbc91862f3" style="width: 100.0%; height: 100.0%;">             <b>Millennium Park</b><br>             Rider Type: Casual Rider<br>             Total Rides: 21,749             </div>`)[0];
+                popup_2ea9e0660bdfc21e05155ab15db18744.setContent(html_5ba7279420745a80d666fbbbc91862f3);
+            
+        
+
+        circle_marker_0f3bb0e91674bc57b98e8fa6f2c8571c.bindPopup(popup_2ea9e0660bdfc21e05155ab15db18744)
+        ;
+
+        
+    
+    
+            var circle_marker_23c9bbf6d357fff248b05ac5ecd3311e = L.circleMarker(
+                [41.90096, -87.623777],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_4cd215ce808ea2e6ce4c407e0dadb5df = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_77715cb9a80947f1a4106c26682077d1 = $(`<div id="html_77715cb9a80947f1a4106c26682077d1" style="width: 100.0%; height: 100.0%;">             <b>Michigan Ave & Oak St</b><br>             Rider Type: Casual Rider<br>             Total Rides: 21,388             </div>`)[0];
+                popup_4cd215ce808ea2e6ce4c407e0dadb5df.setContent(html_77715cb9a80947f1a4106c26682077d1);
+            
+        
+
+        circle_marker_23c9bbf6d357fff248b05ac5ecd3311e.bindPopup(popup_4cd215ce808ea2e6ce4c407e0dadb5df)
+        ;
+
+        
+    
+    
+            var circle_marker_d43299822ff452dce39da58a00bc12ab = L.circleMarker(
+                [41.867226, -87.614043],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_fd94f06cea21ce1bc8f1946ea3ead07c = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_1c1b63e37bcbe310538528c14fb42705 = $(`<div id="html_1c1b63e37bcbe310538528c14fb42705" style="width: 100.0%; height: 100.0%;">             <b>Shedd Aquarium</b><br>             Rider Type: Casual Rider<br>             Total Rides: 20,617             </div>`)[0];
+                popup_fd94f06cea21ce1bc8f1946ea3ead07c.setContent(html_1c1b63e37bcbe310538528c14fb42705);
+            
+        
+
+        circle_marker_d43299822ff452dce39da58a00bc12ab.bindPopup(popup_fd94f06cea21ce1bc8f1946ea3ead07c)
+        ;
+
+        
+    
+    
+            var circle_marker_8c1765bc940d53d98d8c7dcb3aa5b019 = L.circleMarker(
+                [41.911722, -87.626804],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_90740b140efaaa5be55131f10ffd7519 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7fe3a99a6d5ac6dbdf47fdce003f7c6f = $(`<div id="html_7fe3a99a6d5ac6dbdf47fdce003f7c6f" style="width: 100.0%; height: 100.0%;">             <b>Lake Shore Dr & North Blvd</b><br>             Rider Type: Casual Rider<br>             Total Rides: 18,952             </div>`)[0];
+                popup_90740b140efaaa5be55131f10ffd7519.setContent(html_7fe3a99a6d5ac6dbdf47fdce003f7c6f);
+            
+        
+
+        circle_marker_8c1765bc940d53d98d8c7dcb3aa5b019.bindPopup(popup_90740b140efaaa5be55131f10ffd7519)
+        ;
+
+        
+    
+    
+            var circle_marker_43dd0aada69d6043907c993ceb1bff38 = L.circleMarker(
+                [41.926277, -87.630834],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_5a945b5be29824bc990d648e808b23bb = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_7769bfe0c43a450ab5e12b7c3c85917b = $(`<div id="html_7769bfe0c43a450ab5e12b7c3c85917b" style="width: 100.0%; height: 100.0%;">             <b>Theater on the Lake</b><br>             Rider Type: Casual Rider<br>             Total Rides: 15,027             </div>`)[0];
+                popup_5a945b5be29824bc990d648e808b23bb.setContent(html_7769bfe0c43a450ab5e12b7c3c85917b);
+            
+        
+
+        circle_marker_43dd0aada69d6043907c993ceb1bff38.bindPopup(popup_5a945b5be29824bc990d648e808b23bb)
+        ;
+
+        
+    
+    
+            var circle_marker_f746032454212079c5868601d9b6398c = L.circleMarker(
+                [41.886976, -87.612813],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_8b7f3e8e39d0670b72b9efad658a015e = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3b22d719f84f3a8a7d155a0e2588f233 = $(`<div id="html_3b22d719f84f3a8a7d155a0e2588f233" style="width: 100.0%; height: 100.0%;">             <b>Dusable Harbor</b><br>             Rider Type: Casual Rider<br>             Total Rides: 12,546             </div>`)[0];
+                popup_8b7f3e8e39d0670b72b9efad658a015e.setContent(html_3b22d719f84f3a8a7d155a0e2588f233);
+            
+        
+
+        circle_marker_f746032454212079c5868601d9b6398c.bindPopup(popup_8b7f3e8e39d0670b72b9efad658a015e)
+        ;
+
+        
+    
+    
+            var circle_marker_f44a170b69083956efd661bf6046dc22 = L.circleMarker(
+                [41.883984, -87.624684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_ef1b03ef6836d6d2c40675e31ec017d5 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_b5b87d0f40903d46f064c7f35aa85e6f = $(`<div id="html_b5b87d0f40903d46f064c7f35aa85e6f" style="width: 100.0%; height: 100.0%;">             <b>Michigan Ave & Washington St</b><br>             Rider Type: Casual Rider<br>             Total Rides: 12,228             </div>`)[0];
+                popup_ef1b03ef6836d6d2c40675e31ec017d5.setContent(html_b5b87d0f40903d46f064c7f35aa85e6f);
+            
+        
+
+        circle_marker_f44a170b69083956efd661bf6046dc22.bindPopup(popup_ef1b03ef6836d6d2c40675e31ec017d5)
+        ;
+
+        
+    
+    
+            var circle_marker_5d903012e18066c2c9cfd9d2889d6cbc = L.circleMarker(
+                [41.883984, -87.624684],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_eebb40a2f18a7b74d874634ff034e416 = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_82dee743eae40dcc6c37a3b9464a4cfd = $(`<div id="html_82dee743eae40dcc6c37a3b9464a4cfd" style="width: 100.0%; height: 100.0%;">             <b>Michigan Ave & Washington St</b><br>             Rider Type: Casual Rider<br>             Total Rides: 12,228             </div>`)[0];
+                popup_eebb40a2f18a7b74d874634ff034e416.setContent(html_82dee743eae40dcc6c37a3b9464a4cfd);
+            
+        
+
+        circle_marker_5d903012e18066c2c9cfd9d2889d6cbc.bindPopup(popup_eebb40a2f18a7b74d874634ff034e416)
+        ;
+
+        
+    
+    
+            var circle_marker_79aca878f50b604d794b4cbf02a0fafa = L.circleMarker(
+                [41.866095, -87.607267],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.65, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+        var popup_984d5981d612c4e6f4dbfed72a3335cc = L.popup({
+  "maxWidth": 300,
+});
+
+        
+            
+                var html_3507d3b5a308f6e7be3087891b5954d6 = $(`<div id="html_3507d3b5a308f6e7be3087891b5954d6" style="width: 100.0%; height: 100.0%;">             <b>Adler Planetarium</b><br>             Rider Type: Casual Rider<br>             Total Rides: 11,928             </div>`)[0];
+                popup_984d5981d612c4e6f4dbfed72a3335cc.setContent(html_3507d3b5a308f6e7be3087891b5954d6);
+            
+        
+
+        circle_marker_79aca878f50b604d794b4cbf02a0fafa.bindPopup(popup_984d5981d612c4e6f4dbfed72a3335cc)
+        ;
+
+        
+    
+    
+            var marker_b3aec76f17d3db001f903f406f9c80d9 = L.marker(
+                [41.87864, -87.64025],
+                {
+}
+            ).addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+            var icon_e762a8392914acf660c41bfb52181281 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "train",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_87d90c4eb3cbec9bb1543d6bd01803ea = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_322a394d97b38f1c940a9b9eea69f46c = $(`<div id="html_322a394d97b38f1c940a9b9eea69f46c" style="width: 100.0%; height: 100.0%;">Union Station</div>`)[0];
+                popup_87d90c4eb3cbec9bb1543d6bd01803ea.setContent(html_322a394d97b38f1c940a9b9eea69f46c);
+            
+        
+
+        marker_b3aec76f17d3db001f903f406f9c80d9.bindPopup(popup_87d90c4eb3cbec9bb1543d6bd01803ea)
+        ;
+
+        
+    
+    
+            marker_b3aec76f17d3db001f903f406f9c80d9.bindTooltip(
+                `<div>
+                     Union Station
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b3aec76f17d3db001f903f406f9c80d9.setIcon(icon_e762a8392914acf660c41bfb52181281);
+            
+    
+            tile_layer_1ce1e7ce7ac6ac38fbac8a8fc4826165.addTo(map_67efaef3c6bfc0802ec1c1d1c2bddd36);
+        
+    
+                marker_b3aec76f17d3db001f903f406f9c80d9.setIcon(icon_e762a8392914acf660c41bfb52181281);
+            
+</script>
+</html>
