@@ -1,10 +1,21 @@
 # Cyclistic Bike Share Analysis
+![Python](https://img.shields.io/badge/Python-3.11-blue)
+![pandas](https://img.shields.io/badge/pandas-Data%20Analysis-orange)
+![Status](https://img.shields.io/badge/status-Complete-success)
 
 ## Overview
 
 This project analyzes 2019 Cyclistic bike-share trip data to identify behavioral differences between casual riders and annual members.  The goal is to uncover actionable insights that can help Cyclistic convert more casual riders into annual members.
 
 This project was originally completed in R and later rebuilt in Python with improved data cleaning, visualization design, geographic analysis, and business storytelling.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Business Problem](#business-problem)
+- [Key Insights](#key-insights)
+- [Recommendations](#recommendations)
+- [Project Structure](#project-structure)
 
 ## Business Problem
 
@@ -60,19 +71,19 @@ The raw quarterly files were combined into a single cleaned dataset for analysis
 
 ### Casual riders take significantly longer trips
 
-![Average Trip Duration](images/average_trip_duration.png)
+<img src="images/average_trip_duration.png" width="850>
 
 Casual riders take substantially longer trips on average than annual members. This suggests casual riders are more likely to use Cyclistic for leisure and recreational purposes, while annual members rely more heavily on the service for routine transportation and commuting.
 
 ### Annual members show stronger weekday commuting patterns
 
-![Time of Day Behavior](images/time_of_day_behavior.png)
+<img src="images/time_of_day_behavior.png" width="850>
 
 Annual members show significantly stronger ride activity during weekday morning and late afternoon hours, which aligns closely with traditional commuting behavior. Casual riders display more balanced usage across afternoons, evenings, and weekends.
 
 ### Geographic patterns reinforce commuter vs recreational behavior
 
-![Top Station Map](images/top_station_map.png)
+<img src="images/top_station_map.png" width="850>
 
 Annual member stations cluster more heavily around downtown commuter corridors and Union Station, while casual rider stations align more closely with Chicago's lakefront, museums, parks, and recreational areas.
 
@@ -80,9 +91,17 @@ These geographic patterns reinforce the behavioral distinction between commuter-
 
 ### Casual rider demand increases more sharply during warmer seasons
 
-![Seasonal Ride Demand](images/seasonal_ride_demand.png)
+<img src="images/seasonal_ride_demand.png" width="850>
 
 Both rider groups increase usage during warmer seasons, but casual riders show a substantially larger seasonal spike. Annual members maintain more stable year-round usage patterns.
+
+### Demographic differences between rider groups
+
+<img src="images/gender_distribution.png" width="850">
+
+Casual riders show a noticeably more balanced gender distribution, with female riders representing 38.2% of casual usage compared to only 24.9% of annual memberships. While male riders remain the majority in both groups, the significant drop in female representation among annual members suggests potential barriers to long-term membership adoption.
+
+This may indicate opportunities for Cyclistic to further investigate factors such as rider safety perception, commute preferences, accessibility, group riding initiatives, and membership positioning among female riders.
 
 ## Business Impact
 
