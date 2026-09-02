@@ -1,0 +1,1772 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20253.26.0206.0336                               -->
+<workbook original-version='18.1' source-build='2025.3.3 (20253.26.0206.0336)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='cyclistic_2019_tableau' inline='true' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cyclistic_2019_tableau' name='textscan.0kt1gxt1bbzgaq189gb4n0ej12im'>
+            <connection class='textscan' directory='/Users/alecheffron/cyclistic_python_case_study/data/processed' filename='cyclistic_2019_tableau.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0kt1gxt1bbzgaq189gb4n0ej12im' name='cyclistic_2019_tableau.csv' table='[cyclistic_2019_tableau#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+            <column datatype='integer' name='trip_id' ordinal='0' />
+            <column datatype='datetime' name='start_time' ordinal='1' />
+            <column datatype='integer' name='from_station_id' ordinal='2' />
+            <column datatype='string' name='from_station_name' ordinal='3' />
+            <column datatype='integer' name='to_station_id' ordinal='4' />
+            <column datatype='string' name='to_station_name' ordinal='5' />
+            <column datatype='string' name='rider_type' ordinal='6' />
+            <column datatype='real' name='trip_duration_minutes' ordinal='7' />
+            <column datatype='string' name='day_of_week' ordinal='8' />
+            <column datatype='integer' name='month' ordinal='9' />
+            <column datatype='integer' name='hour' ordinal='10' />
+            <column datatype='string' name='season' ordinal='11' />
+            <column datatype='string' name='hour_label' ordinal='12' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_US&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[trip_id]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>trip_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>start_time</remote-name>
+            <remote-type>135</remote-type>
+            <local-name>[start_time]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>start_time</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>from_station_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[from_station_id]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>from_station_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>from_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[from_station_name]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>from_station_name</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>to_station_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[to_station_id]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>to_station_id</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>to_station_name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[to_station_name]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>to_station_name</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>rider_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[rider_type]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>rider_type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>trip_duration_minutes</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[trip_duration_minutes]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>trip_duration_minutes</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day_of_week</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[day_of_week]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>day_of_week</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hour]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>hour</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>season</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[season]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>season</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hour_label</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[hour_label]</local-name>
+            <parent-name>[cyclistic_2019_tableau.csv]</parent-name>
+            <remote-alias>hour_label</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RUS' />
+            <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Calculation1' datatype='real' name='[Calculation_0447816284577792]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='' />
+      </column>
+      <column caption='Casual Rider %' datatype='real' name='[Calculation_0447816284631041]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM(&#10;    IF [rider_type] = &quot;Casual Rider&quot; THEN 1&#10;    ELSE 0&#10;    END)&#10;/&#10;COUNT([trip_id])' />
+      </column>
+      <column caption='Calculation2' datatype='real' name='[Calculation_0447816617467906]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG(&#10;    IF [rider_type] = &quot;Casual Rider&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)&#10;/&#10;AVG(&#10;    IF [rider_type] = &quot;Annual Member&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)' />
+      </column>
+      <column caption='Casual Trip Duration Ratio' datatype='real' name='[Calculation_0447816617558019]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='AVG(&#10;    IF [rider_type] = &quot;Casual Rider&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)&#10;/&#10;AVG(&#10;    IF [rider_type] = &quot;Annual Member&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)' />
+      </column>
+      <column caption='cyclistic_2019_tableau.csv' datatype='table' name='[__tableau_internal_object_id__].[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]' role='measure' type='quantitative' />
+      <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+      <column caption='From Station Id' datatype='integer' name='[from_station_id]' role='dimension' type='ordinal' />
+      <column caption='From Station Name' datatype='string' name='[from_station_name]' role='dimension' type='nominal' />
+      <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+      <column caption='Hour Label' datatype='string' name='[hour_label]' role='dimension' type='nominal' />
+      <column caption='Month' datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+      <column caption='Season' datatype='string' name='[season]' role='dimension' type='nominal' />
+      <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+      <column caption='To Station Id' datatype='integer' name='[to_station_id]' role='dimension' type='ordinal' />
+      <column caption='To Station Name' datatype='string' name='[to_station_name]' role='dimension' type='nominal' />
+      <column caption='Trip Duration Minutes' datatype='real' name='[trip_duration_minutes]' role='measure' type='quantitative' />
+      <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+      <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+      <group caption='Action (Day Of Week,Rider Type)' hidden='true' name='[Action (Day Of Week,Rider Type)]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[day_of_week]' />
+          <groupfilter function='level-members' level='[rider_type]' />
+        </groupfilter>
+      </group>
+      <group caption='Action (Rider Type,MONTH(Start Time))' hidden='true' name='[Action (Rider Type,MONTH(Start Time))]' name-style='unqualified' user:auto-column='sheet_link'>
+        <groupfilter function='crossjoin'>
+          <groupfilter function='level-members' level='[rider_type]' />
+          <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+        </groupfilter>
+      </group>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' author-locale='en_US' class='hyper' dbname='/var/folders/1f/ckzxb9c14sg6trc0pbmk_cr80000gn/T/tableau-temp/#TableauTemp_1l1y0jz0a3tib015menzk0sedbpc.hyper' default-settings='hyper' schema='Extract' sslmode='' tablename='Extract' update-time='08/31/2026 04:12:32 PM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>trip_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[trip_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip_id</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>3816156</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>start_time</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[start_time]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>start_time</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>3643747</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>from_station_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[from_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>from_station_id</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1045</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>from_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[from_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>from_station_name</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1069</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>to_station_id</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[to_station_id]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>to_station_id</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>1004</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>to_station_name</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[to_station_name]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>to_station_name</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>1049</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>rider_type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[rider_type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>rider_type</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>2</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>trip_duration_minutes</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[trip_duration_minutes]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>trip_duration_minutes</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>18303</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>day_of_week</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[day_of_week]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>day_of_week</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>month</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[month]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>month</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>12</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[hour]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>season</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[season]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>season</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>4</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>hour_label</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[hour_label]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>hour_label</remote-alias>
+              <ordinal>12</ordinal>
+              <family>cyclistic_2019_tableau.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>24</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='0' name='LEN_RUS' />
+              <object-id>[cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:rider_type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Annual Member&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Casual Rider&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;United States&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='cyclistic_2019_tableau.csv' id='cyclistic_2019_tableau.csv_1AD2796FB05743B6B28E27BBE8F85A70'>
+            <properties context=''>
+              <relation connection='textscan.0kt1gxt1bbzgaq189gb4n0ej12im' name='cyclistic_2019_tableau.csv' table='[cyclistic_2019_tableau#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_US' separator=','>
+                  <column datatype='integer' name='trip_id' ordinal='0' />
+                  <column datatype='datetime' name='start_time' ordinal='1' />
+                  <column datatype='integer' name='from_station_id' ordinal='2' />
+                  <column datatype='string' name='from_station_name' ordinal='3' />
+                  <column datatype='integer' name='to_station_id' ordinal='4' />
+                  <column datatype='string' name='to_station_name' ordinal='5' />
+                  <column datatype='string' name='rider_type' ordinal='6' />
+                  <column datatype='real' name='trip_duration_minutes' ordinal='7' />
+                  <column datatype='string' name='day_of_week' ordinal='8' />
+                  <column datatype='integer' name='month' ordinal='9' />
+                  <column datatype='integer' name='hour' ordinal='10' />
+                  <column datatype='string' name='season' ordinal='11' />
+                  <column datatype='string' name='hour_label' ordinal='12' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <actions>
+    <action caption='Filter 1 (generated)' name='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Cyclistic Ridership Dashboard' type='sheet' worksheet='Rides by Day of Week' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Cyclistic Ridership Dashboard' />
+      </command>
+    </action>
+    <action caption='Filter 2 (generated)' name='[Action2_3F0FAC50165C4F03823D0B733D131138]'>
+      <activation auto-clear='true' type='on-select' />
+      <source dashboard='Cyclistic Ridership Dashboard' type='sheet' worksheet='Monthly Ridership Trend' />
+      <command command='tsc:tsl-filter'>
+        <param name='special-fields' value='all' />
+        <param name='target' value='Cyclistic Ridership Dashboard' />
+      </command>
+    </action>
+  </actions>
+  <worksheets>
+    <worksheet name='Avg Trip Duration by Rider Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_duration_minutes]' derivation='Avg' name='[avg:trip_duration_minutes:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Duration Minutes' datatype='real' name='[trip_duration_minutes]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[avg:trip_duration_minutes:qk]' scope='rows' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' value='false' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Bar' />
+            <encodings>
+              <color column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[avg:trip_duration_minutes:qk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</cols>
+      </table>
+      <simple-id uuid='{4503DD2B-7808-4AC2-87C6-A3CB080D1F65}' />
+    </worksheet>
+    <worksheet name='KPI - Avg Trip Duration'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_duration_minutes]' derivation='Avg' name='[avg:trip_duration_minutes:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Duration Minutes' datatype='real' name='[trip_duration_minutes]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[avg:trip_duration_minutes:qk]' value='n#,##0.0;-#,##0.0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[avg:trip_duration_minutes:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[avg:trip_duration_minutes:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run bold='true' fontsize='11'>Avg Trip Duration (min)</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{4F217396-52E7-4EF2-A70B-548C54BF00BE}' />
+    </worksheet>
+    <worksheet name='KPI - Casual Rider %'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column caption='Casual Rider %' datatype='real' name='[Calculation_0447816284631041]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM(&#10;    IF [rider_type] = &quot;Casual Rider&quot; THEN 1&#10;    ELSE 0&#10;    END)&#10;/&#10;COUNT([trip_id])' />
+            </column>
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0447816284631041]' derivation='User' name='[usr:Calculation_0447816284631041:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816284631041:qk]' value='p0.0%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816284631041:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816284631041:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='11'>Casual Riders</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{025A1A8F-9C20-44F5-8277-050E71F1B7A8}' />
+    </worksheet>
+    <worksheet name='KPI - Casual Trip Duration'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column caption='Casual Trip Duration Ratio' datatype='real' name='[Calculation_0447816617558019]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='AVG(&#10;    IF [rider_type] = &quot;Casual Rider&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)&#10;/&#10;AVG(&#10;    IF [rider_type] = &quot;Annual Member&quot;&#10;    THEN [trip_duration_minutes]&#10;    END&#10;)' />
+            </column>
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Trip Duration Minutes' datatype='real' name='[trip_duration_minutes]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_0447816617558019]' derivation='User' name='[usr:Calculation_0447816617558019:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816617558019:qk]' value='n#,##0.00;-#,##0.00' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816617558019:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='23'><![CDATA[<[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[usr:Calculation_0447816617558019:qk]>x]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='11'>Longer Casual Trips</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{7B37DCFA-9D3B-4778-BFFA-3861B5CF9606}' />
+    </worksheet>
+    <worksheet name='KPI - Total Rides'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run bold='true' fontsize='24'><![CDATA[<[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]>]]></run>
+                <run>Æ&#10;</run>
+                <run fontsize='11'>Total Rides</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CBBF5623-59B0-409E-B8F3-93798B2B4E20}' />
+    </worksheet>
+    <worksheet name='Monthly Ridership Trend'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:qk]' pivot='key' type='quantitative' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' scope='rows' value='Monthly Rides' />
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[tmn:start_time:qk]' scope='cols' value='Month' />
+            <format attr='auto-subtitle' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[tmn:start_time:qk]' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[tmn:start_time:qk]</cols>
+      </table>
+      <simple-id uuid='{70F53BF7-E96D-4A59-8F4A-4F45DE8A043A}' />
+    </worksheet>
+    <worksheet name='Rides by Day of Week'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column-instance column='[day_of_week]' derivation='None' name='[none:day_of_week:nk]' pivot='key' type='nominal' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' scope='rows' value='Total Rides' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:day_of_week:nk]</cols>
+      </table>
+      <simple-id uuid='{1B0EE588-7DC2-4B0F-B62F-75D1C9FA66F7}' />
+    </worksheet>
+    <worksheet name='Rides by Hour'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='Hour' datatype='integer' name='[hour]' role='measure' type='quantitative' />
+            <column-instance column='[hour]' derivation='None' name='[none:hour:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' filter-group='4'>
+            <groupfilter function='level-members' level='[none:rider_type:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+          </filter>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' scope='rows' value='Total Rides' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+            <encodings>
+              <color column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:hour:qk]</cols>
+      </table>
+      <simple-id uuid='{76E00C44-E0C0-43B4-9941-14342AF76D5B}' />
+    </worksheet>
+    <worksheet name='Top Casual Start Stations'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='From Station Name' datatype='string' name='[from_station_name]' role='dimension' type='nominal' />
+            <column-instance column='[from_station_name]' derivation='None' name='[none:from_station_name:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([trip_id])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:from_station_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='display' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]' value='true' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#f28e2b' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]</cols>
+      </table>
+      <simple-id uuid='{6F079352-EDA6-4D8D-BA05-F9325DFD7152}' />
+    </worksheet>
+    <worksheet name='Top Member Start Stations'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+            <column-instance column='[trip_id]' derivation='CountD' name='[ctd:trip_id:qk]' pivot='key' type='quantitative' />
+            <column caption='Day Of Week' datatype='string' name='[day_of_week]' role='dimension' type='nominal' />
+            <column caption='From Station Name' datatype='string' name='[from_station_name]' role='dimension' type='nominal' />
+            <column-instance column='[from_station_name]' derivation='None' name='[none:from_station_name:nk]' pivot='key' type='nominal' />
+            <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+            <column caption='Start Time' datatype='datetime' name='[start_time]' role='dimension' type='ordinal' />
+            <column-instance column='[start_time]' derivation='Month-Trunc' name='[tmn:start_time:ok]' pivot='key' type='ordinal' />
+            <column caption='Trip Id' datatype='integer' name='[trip_id]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action1_AF2AB721C4A749BD802CB26C6FA13A6F]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[day_of_week]' />
+              <groupfilter function='level-members' level='[rider_type]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]'>
+            <groupfilter function='crossjoin' user:ui-action-filter='[Action2_3F0FAC50165C4F03823D0B733D131138]' user:ui-enumeration='all' user:ui-marker='enumerate'>
+              <groupfilter function='level-members' level='[rider_type]' />
+              <groupfilter function='level-members' level='[tmn:start_time:ok]' />
+            </groupfilter>
+          </filter>
+          <filter class='categorical' column='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='COUNTD([trip_id])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:from_station_name:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Day Of Week,Rider Type)]</column>
+            <column>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[Action (Rider Type,MONTH(Start Time))]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]' scope='cols' value='' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='rows' value='false' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:from_station_name:nk]</rows>
+        <cols>[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[ctd:trip_id:qk]</cols>
+      </table>
+      <simple-id uuid='{73B61E82-426A-465F-A588-C04D1815C5B7}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Cyclistic Ridership Dashboard'>
+      <style />
+      <size maxheight='1100' maxwidth='1200' minheight='1100' minwidth='1200' sizing-mode='range' />
+      <datasources>
+        <datasource caption='cyclistic_2019_tableau' name='federated.1qsxi7h16pszh11bo0wf70z3nvbv' />
+      </datasources>
+      <datasource-dependencies datasource='federated.1qsxi7h16pszh11bo0wf70z3nvbv'>
+        <column-instance column='[rider_type]' derivation='None' name='[none:rider_type:nk]' pivot='key' type='nominal' />
+        <column caption='Rider Type' datatype='string' name='[rider_type]' role='dimension' type='nominal' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='34091' id='12' param='horz' type-v2='layout-flow' w='98666' x='667' y='727'>
+            <zone h='34091' id='3' param='vert' type-v2='layout-flow' w='87916' x='667' y='727'>
+              <zone h='6000' id='5' type-v2='text' w='87916' x='667' y='727'>
+                <formatted-text>
+                  <run bold='true' fontsize='20'>Cyclistic Ridership Analysis</run>
+                  <run>Æ&#10;</run>
+                  <run fontsize='11'>Annual Members vs. Casual Riders | 2019</run>
+                </formatted-text>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone fixed-size='74' h='6727' id='6' is-fixed='true' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='87916' x='667' y='6727'>
+                <zone h='6728' id='7' name='KPI - Total Rides' show-title='false' w='29333' x='667' y='6727'>
+                  <layout-cache fixed-size-h='65' fixed-size-w='180' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='6728' id='8' name='KPI - Casual Rider %' show-title='false' w='29333' x='30000' y='6727'>
+                  <layout-cache fixed-size-h='65' fixed-size-w='120' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='6728' id='21' name='KPI - Casual Trip Duration' show-title='false' w='29250' x='59333' y='6727'>
+                  <layout-cache fixed-size-h='64' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='21364' id='10' name='Monthly Ridership Trend' w='87916' x='667' y='13454'>
+                <layout-cache minheight='198' minwidth='166' type-h='scalable' type-w='scalable' />
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='129' h='34091' id='11' is-fixed='true' param='vert' type-v2='layout-flow' w='10750' x='88583' y='727'>
+              <zone h='6000' id='13' name='Monthly Ridership Trend' pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type-v2='color' w='10750' x='88583' y='727'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4727' id='20' mode='dropdown' name='Monthly Ridership Trend' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type-v2='filter' values='database' w='10750' x='88583' y='6727'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='17546' id='14' param='horz' type-v2='layout-flow' w='98666' x='667' y='34818'>
+            <zone fixed-size='542' h='17546' id='15' is-fixed='true' name='Rides by Day of Week' w='45834' x='667' y='34818'>
+              <layout-cache minheight='164' type-h='scalable' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+            <zone h='17546' id='17' name='Avg Trip Duration by Rider Type' w='52832' x='46501' y='34818'>
+              <layout-cache cell-count-w='2' non-cell-size-w='30' type-h='fixed' type-w='cell' />
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='30182' id='18' name='Top Casual Start Stations' w='49333' x='667' y='69091'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='30182' id='19' name='Top Member Start Stations' w='49333' x='50000' y='69091'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='16727' id='16' name='Rides by Hour' w='98666' x='667' y='52364'>
+            <layout-cache minwidth='166' type-h='fixed' type-w='scalable' />
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone forceUpdate='true' h='6545' id='22' type-v2='text' w='38917' x='36750' y='273'>
+          <formatted-text>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>Key Insights</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Casual trips are </run>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>3.05× as long</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'> as member trips.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Member usage peaks around </run>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>8 AM and 5 PM</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>, suggesting commuter behavior.</run>
+            <run>Æ&#10;</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>Casual ridership is strongest on </run>
+            <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>weekends and summer months</run>
+            <run fontcolor='#000000' fontname='Benton Sans Book'>.</run>
+          </formatted-text>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1900' minheight='1900' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='26' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98546' id='25' param='vert' type-v2='layout-flow' w='98666' x='667' y='727'>
+                <zone forceUpdate='true' h='6545' id='22' type-v2='text' w='38917' x='36750' y='273'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>Key Insights</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>Casual trips are </run>
+                    <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>3.05× as long</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'> as member trips.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>Member usage peaks around </run>
+                    <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>8 AM and 5 PM</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>, suggesting commuter behavior.</run>
+                    <run>Æ&#10;</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>Casual ridership is strongest on </run>
+                    <run bold='true' fontcolor='#000000' fontname='Benton Sans Book'>weekends and summer months</run>
+                    <run fontcolor='#000000' fontname='Benton Sans Book'>.</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6000' id='5' type-v2='text' w='87916' x='667' y='727'>
+                  <formatted-text>
+                    <run bold='true' fontsize='20'>Cyclistic Ridership Analysis</run>
+                    <run>Æ&#10;</run>
+                    <run fontsize='11'>Annual Members vs. Casual Riders | 2019</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='66' h='6728' id='7' is-fixed='true' name='KPI - Total Rides' show-title='false' w='29333' x='667' y='6727'>
+                  <layout-cache fixed-size-h='65' fixed-size-w='180' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='66' h='6728' id='8' is-fixed='true' name='KPI - Casual Rider %' show-title='false' w='29333' x='30000' y='6727'>
+                  <layout-cache fixed-size-h='65' fixed-size-w='120' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='66' h='6728' id='21' is-fixed='true' name='KPI - Casual Trip Duration' show-title='false' w='29250' x='59333' y='6727'>
+                  <layout-cache fixed-size-h='64' fixed-size-w='160' type-h='fixed' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4727' id='20' mode='dropdown' name='Monthly Ridership Trend' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type-v2='filter' values='database' w='10750' x='88583' y='6727'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='227' h='21364' id='10' is-fixed='true' name='Monthly Ridership Trend' w='87916' x='667' y='13454'>
+                  <layout-cache minheight='198' minwidth='166' type-h='scalable' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='6000' id='13' name='Monthly Ridership Trend' pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type-v2='color' w='10750' x='88583' y='727'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='185' h='17546' id='15' is-fixed='true' name='Rides by Day of Week' w='45834' x='667' y='34818'>
+                  <layout-cache minheight='164' type-h='scalable' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='185' h='17546' id='17' is-fixed='true' name='Avg Trip Duration by Rider Type' w='52832' x='46501' y='34818'>
+                  <layout-cache cell-count-w='2' non-cell-size-w='30' type-h='fixed' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='176' h='16727' id='16' is-fixed='true' name='Rides by Hour' w='98666' x='667' y='52364'>
+                  <layout-cache minwidth='166' type-h='fixed' type-w='scalable' />
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='30182' id='18' is-fixed='true' name='Top Casual Start Stations' w='49333' x='667' y='69091'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='30182' id='19' is-fixed='true' name='Top Member Start Stations' w='49333' x='50000' y='69091'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{4513310F-128E-4C0B-B9B8-7480047985F3}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='worksheet' name='KPI - Total Rides'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E70576CE-419F-4DF5-B989-A4961AAB4D31}' />
+    </window>
+    <window class='worksheet' name='KPI - Casual Rider %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{18E87F4B-DC2D-4703-9A42-22F1D004ED6F}' />
+    </window>
+    <window class='worksheet' name='KPI - Avg Trip Duration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D630BB41-39E6-4449-963E-1792396C484C}' />
+    </window>
+    <window class='worksheet' name='KPI - Casual Trip Duration'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{C07B6C6D-461D-4E9B-9FF4-B950B395B385}' />
+    </window>
+    <window class='worksheet' name='Monthly Ridership Trend'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type='filter' />
+            <card pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{7642282D-BDBF-4326-95C9-58EDCB53FF3B}' />
+    </window>
+    <window class='worksheet' name='Rides by Day of Week'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{258B4EB0-616E-4CF1-9C7B-010824CFC76B}' />
+    </window>
+    <window class='worksheet' name='Rides by Hour'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{9A728CE9-6E82-479A-8A79-6789CE1AF059}' />
+    </window>
+    <window class='worksheet' name='Avg Trip Duration by Rider Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1qsxi7h16pszh11bo0wf70z3nvbv].[none:rider_type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{35C5C466-3D8E-4CEF-93E3-224E5594F43D}' />
+    </window>
+    <window class='worksheet' name='Top Casual Start Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{5D0A00D7-6433-4ABA-B538-DE3E73DA0950}' />
+    </window>
+    <window class='worksheet' name='Top Member Start Stations'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E5C68898-D0EC-438A-AEB1-83E8353B0D93}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Cyclistic Ridership Dashboard'>
+      <viewpoints>
+        <viewpoint name='Avg Trip Duration by Rider Type'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='KPI - Casual Rider %' />
+        <viewpoint name='KPI - Casual Trip Duration' />
+        <viewpoint name='KPI - Total Rides' />
+        <viewpoint name='Monthly Ridership Trend'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rides by Day of Week'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Rides by Hour'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top Casual Start Stations' />
+        <viewpoint name='Top Member Start Stations' />
+      </viewpoints>
+      <active id='-1' />
+      <simple-id uuid='{F0324E33-D492-4E40-9AD0-CFF85696E6B7}' />
+    </window>
+  </windows>
+</workbook>

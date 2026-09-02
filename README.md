@@ -13,6 +13,7 @@ This project was originally completed in R and later rebuilt in Python with impr
 
 - [Overview](#overview)
 - [Business Problem](#business-problem)
+- [Interactive Tableau Dashboard](#interactive-tableau-dashboard)
 - [Key Insights](#key-insights)
 - [Recommendations](#recommendations)
 - [Project Structure](#project-structure)
@@ -41,6 +42,7 @@ The final recommendations focus on identifying where, when, and how Cyclistic sh
 - Jupyter Notebook
 - VS Code
 - Git / GitHub
+- Tableau
 
 ## Dataset
 
@@ -62,10 +64,31 @@ The raw quarterly files were combined into a single cleaned dataset for analysis
 
 1. Imported and merged quarterly Cyclistic trip datasets.
 2. Cleaned and standardized inconsistent column formatting.
-3. Converted datetime fields and engineered new analytical features.
+3. Converted datetime fields and engineered analytical features.
 4. Performed exploratory data analysis focused on rider behavior differences.
-5. Built polished visualizations to identify behavioral and geographic trends.
-6. Developed business recommendations based on analytical findings.
+5. Conducted geographic and station-level analysis.
+6. Built an interactive Tableau dashboard for stakeholder exploration.
+7. Developed business recommendations based on analytical findings.
+
+## Interactive Tableau Dashboard
+
+To extend the Python analysis into an interactive business intelligence tool, I built a Tableau dashboard analyzing more than 3.8 million rides across rider type, seasonality, day of week, time of day, trip duration, and station usage.
+
+The dashboard allows stakeholders to interactively compare Annual Members and Casual Riders across seasonal, temporal, trip-duration, and station-level patterns using rider-type filtering.
+
+<a href="https://public.tableau.com/app/profile/alec.heffron/viz/cyclistic_dashboard_17883586772520/CyclisticRidershipDashboard">
+  <img src="./images/cyclistic_dashboard.png" width="1000">
+</a>
+
+### [View the Interactive Tableau Dashboard](https://public.tableau.com/app/profile/alec.heffron/viz/cyclistic_dashboard_17883586772520/CyclisticRidershipDashboard)
+
+### Dashboard Highlights
+
+- **3.8M+ total rides** analyzed
+- **23.0% of rides** were taken by casual riders
+- Casual trips were **3.05× as long as member trips** on average
+- Member ridership shows pronounced **8 AM and 5 PM peaks**
+- Casual ridership is strongest during **weekends and summer months**
 
 ## Key Insights
 
@@ -99,7 +122,7 @@ Both rider groups increase usage during warmer seasons, but casual riders show a
 
 <img src="./images/gender_distribution.png" width="850">
 
-Casual riders show a noticeably more balanced gender distribution, with female riders representing 38.2% of casual usage compared to only 24.9% of annual memberships. While male riders remain the majority in both groups, the significant drop in female representation among annual members suggests potential barriers to long-term membership adoption.
+Casual riders show a noticeably more balanced gender distribution, with female riders representing 38.2% of casual usage compared to only 24.9% of annual memberships. While male riders remain the majority in both groups, the notable drop in female representation among annual members suggests potential barriers to long-term membership adoption.
 
 This may indicate opportunities for Cyclistic to further investigate factors such as rider safety perception, commute preferences, accessibility, group riding initiatives, and membership positioning among female riders.
 
@@ -136,11 +159,16 @@ cyclistic-python-case-study/
 │
 ├── notebooks/
 │   ├── 01_cleaning_and_preparation.ipynb
-│   └── 02_exploratory_analysis.ipynb
+│   ├── 02_exploratory_analysis.ipynb
+│   └── cyclistic_tableau_prep.ipynb
 │
 ├── images/
+│   ├── cyclistic_dashboard.png
+│   └── cyclistic_dashboard.twb
 │
 ├── presentation/
+│
+├── src/
 │
 ├── requirements.txt
 └── README.md
@@ -164,7 +192,6 @@ pip install -r requirements.txt
 Future improvements could include:
 
 - predictive modeling for membership conversion likelihood
-- interactive dashboard deployment
 - deeper geographic clustering analysis
 - weather-based ride behavior analysis
 - station-level forecasting
